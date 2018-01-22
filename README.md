@@ -1,2 +1,5 @@
 # BashConfigurations
-Funciones y aliases creados para mejorar la experiencia en linux mint 18 Sarah
+
+## Descripción
+- Funciones y aliases creados para mejorar mi experiencia en linux mint 18 Sarah.
+- Códigos basados en busquedas de internet y adaptaciones propias según lo aprendido.
