@@ -154,4 +154,6 @@ alerta_finalizado(){
 		trabajo_terminado_fracaso
 	fi
 }
-
+# Permite exportar la función para ser utilizada por otros scripts.
+export -f alerta_finalizado
+#type -a alerta_finalizado	# Permite conocer el contenido de una función
