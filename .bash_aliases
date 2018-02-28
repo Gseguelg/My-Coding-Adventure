@@ -37,6 +37,17 @@ alias etcher='etcher-electron'
 alias trabajo_terminado_exito='paplay /usr/share/sounds/freedesktop/stereo/trabajo_exito.wav'
 alias trabajo_terminado_fracaso='paplay /usr/share/sounds/freedesktop/stereo/trabajo_fracaso.wav'
 
+# alias para escanar redes visibles
+alias getwifis='iwlist wlp2s0 scan'
+
+# alias to list created virtual machines in virtualbox
+alias lsVMs='VBoxManage list vms'
+
+# alias to start the virtual machine 'Mierdows7' without GUI (background)
+alias startWindowsVM='VBoxManage startvm Mierdows7 --type headless'
+
+# alias to shutdown (forced) started virtual machines (here 'Mierdows7')
+alias stopWindowsVM='VBoxManage controlvm Mierdows7 poweroff'
 
 #################################################################### 
 #######################	FUNCIONES	############################ 
@@ -73,8 +84,8 @@ PruebaImpresion(){
 	echo 'Número de inputs:' $#
 	echo 'Último argumento:' ${*:$#}
 	echo 'Todos los argumentos menos el último:' ${*:1:$#-1}
-	echo 'Extensión del Nombre del archivo primero:' ${1##*.}
-	echo 'Nombre del archivo primero:' ${1%.*}
+	echo 'Extensión del Nombre del primer archivo:' ${1##*.}
+	echo 'Nombre sin extension (hasta ultimo punto) del primer archivo:' ${1%.*}
 	}
 
 crearNuevoPDF(){
@@ -154,6 +165,19 @@ alerta_finalizado(){
 		trabajo_terminado_fracaso
 	fi
 }
+
+wdevices(){
+	# Función para escanear dispositivos en red wifi (aquí wlp2s0) de 0 a 24.
+	# Unico argumento ip de red local.
+	# Guerda la ip hasta ultimo punto y agrega '0/24'
+	# Example: wdevices 192.168.1.5
+	# es traducido a la orden: sudo nmap -sn 192.168.1.0/24
+	echo "Checking Local IP: ${1%.*}.0/24"
+	echo "Command to run: 'sudo nmap -sn ${1%.*}.0/24'"
+	sudo nmap -sn "${1%.*}.0/24"
+}
+
 # Permite exportar la función para ser utilizada por otros scripts.
 export -f alerta_finalizado
 #type -a alerta_finalizado	# Permite conocer el contenido de una función
+
