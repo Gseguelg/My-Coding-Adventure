@@ -167,7 +167,7 @@ alerta_finalizado(){
 }
 
 wdevices(){
-	:'
+	: '
 	Función para escanear dispositivos en red wifi.
 	Posee un único argumento opcional: ip de red local.
 	Guarda la ip hasta ultimo punto y agrega '0/24' en caso de darse agumento, de lo
