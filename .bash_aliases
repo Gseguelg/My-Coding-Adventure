@@ -167,14 +167,27 @@ alerta_finalizado(){
 }
 
 wdevices(){
-	# Función para escanear dispositivos en red wifi (aquí wlp2s0) de 0 a 24.
-	# Unico argumento ip de red local.
-	# Guerda la ip hasta ultimo punto y agrega '0/24'
-	# Example: wdevices 192.168.1.5
-	# es traducido a la orden: sudo nmap -sn 192.168.1.0/24
-	echo "Checking Local IP: ${1%.*}.0/24"
-	echo "Command to run: 'sudo nmap -sn ${1%.*}.0/24'"
-	sudo nmap -sn "${1%.*}.0/24"
+	:'
+	Función para escanear dispositivos en red wifi.
+	Posee un único argumento opcional: ip de red local.
+	Guarda la ip hasta ultimo punto y agrega '0/24' en caso de darse agumento, de lo
+	contrario utiliza la retornada por función 'ip route'.
+
+	Ejemplo1: wdevices 192.168.0.5
+	# es traducido a la orden: sudo nmap -sn 192.168.0.0/24
+	Ejemplo2: wdevices
+	# es traducido a la orden: sudo nmap -sn 192.168.0.0/24
+	'
+	LocalNetworkIP="${1%.*}.0/24"
+	if [ $# -eq 0 ]; then
+		# en caso que no se entrege direccion.
+		echo "Using local network"
+		LocalNetworkName=$(ip route | grep kernel | awk '{ print( $3 ) }')
+		LocalNetworkIP=$(ip route | grep kernel | awk '{ print( $1 ) }')
+	fi
+	echo "Checking Local IP $LocalNetworkIP"
+	echo "Command to run: 'sudo nmap -sn $LocalNetworkIP'"
+	sudo nmap -sn $LocalNetworkIP
 }
 
 # Permite exportar la función para ser utilizada por otros scripts.
