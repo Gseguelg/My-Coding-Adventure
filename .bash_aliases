@@ -194,3 +194,35 @@ wdevices(){
 export -f alerta_finalizado
 #type -a alerta_finalizado	# Permite conocer el contenido de una función
 
+
+play_exito(){
+	: '
+	Función para repoducir sonidos de éxito con ogg123 luego
+	que una tarea finalizara exitosamente. (apt-get isntall vorbis-tools)
+	'
+	RUTA_SONIDOS="/home/$(whoami)/Documentos/sonidos/exito/"
+	ogg123 -q ${RUTA_SONIDOS}sfx_ui_success.ogg ${RUTA_SONIDOS}SiegeTank_Pissed00.ogg
+}
+
+
+play_fallo(){
+	: '
+	Función para repoducir sonidos de fracaso o fallo con ogg123 luego
+	que una tarea NO finalizara exitosamente. (apt-get isntall vorbis-tools)
+	'
+	RUTA_SONIDOS="/home/$(whoami)/Documentos/sonidos/fallo/"
+	ogg123 -q ${RUTA_SONIDOS}speech_unsuccessful.ogg ${RUTA_SONIDOS}SiegeTank_Pissed01.ogg
+}
+
+
+fin(){
+        : '
+        Función que detecta si el último comando terminó exisosamente o no. 
+        Reproduce un sonido respectivo como respuesta a cada caso.
+        '
+        if [ $? -eq 0 ]; then
+                play_exito;
+        else
+                play_fallo;
+        fi
+}
