@@ -216,9 +216,8 @@ play_fallo(){
 
 
 fin(){
-        : '
-        Función que detecta si el último comando terminó exisosamente o no. 
-        Reproduce un sonido respectivo como respuesta a cada caso.
+        # Función que detecta si el último comando terminó exisosamente o no. 
+        # Reproduce un sonido respectivo como respuesta a cada caso.
         '
         if [ $? -eq 0 ]; then
                 play_exito;
