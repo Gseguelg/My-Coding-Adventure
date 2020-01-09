@@ -8,3 +8,6 @@ Please see the [Wiki page](https://github.com/Gseguelg/My-Linux-Adventure/wiki/T
 ###### Descripción
 - Funciones y aliases creados para mejorar mi experiencia en linux mint 18 Sarah.
 - Códigos basados en busquedas de internet y adaptaciones propias según lo aprendido.
+
+##### Visual Studio Code
+- Directory with **user settings** and **keyboard shortcuts**.
