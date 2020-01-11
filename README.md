@@ -1,7 +1,7 @@
 # Description
 These files contain my personal preferences on some software under Windows and (mainly) Linux.
 
-See the **[Wiki page](../../Wiki)** for further details on brief cheatsheets for each subject. 
+See the **[Wiki page](../../wiki)** for further details on brief cheatsheets for each subject. 
 
 # Content
 ## Linux Files
