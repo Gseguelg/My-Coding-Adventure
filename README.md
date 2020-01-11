@@ -1,7 +1,9 @@
-These files are only my personal preference on how to use some software in Windows and (mainly) Linux.
+# Description
+These files contain my personal preferences on some software under Windows and (mainly) Linux.
 
-Please see the [Wiki page](https://github.com/Gseguelg/My-Linux-Adventure/wiki/Table-of-Contents) for further details on brief cheatsheets for each subject. 
+##### See the [Wiki page](https://github.com/Gseguelg/My-Linux-Adventure/wiki/Table-of-Contents) for further details on brief cheatsheets for each subject. 
 
+# Content
 ## Linux Files
 
 ##### .bash_aliases
