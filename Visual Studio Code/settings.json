@@ -16,7 +16,6 @@
     "newFile.expandBraces": true,
     "newFile.relativeTo": "project",
     "newFile.showPathRelativeTo": "project",
-    "workbench.colorTheme": "Brackets Light Pro Bold",
     "workbench.iconTheme": "ayu",
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
@@ -40,7 +39,6 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
-    "python.formatting.provider": "black",
     "vscodeWorkspaceSwitcher.paths": [
         "C:\\Users\\TraxidusWolf\\Documents\\VSC workspaces"
     ],
@@ -79,4 +77,15 @@
     "emmet.excludeLanguages": [
         // "markdown"
     ],
+    "code-runner.enableAppInsights": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "sqltools.useNodeRuntime": true,
+    "[sql]": {
+        "editor.defaultFormatter": "mtxr.sqltools"
+    },
+    "python.formatting.provider": "yapf",
+    "workbench.colorTheme": "Brackets Light Pro Bold",
+    "terminal.explorerKind": "external",
+    "terminal.external.windowsExec": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
 }
