@@ -75,17 +75,12 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+m",
-        "command": "editor.action.smartSelect.expand",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "shift+alt+right",
         "command": "-editor.action.smartSelect.expand",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+r",
+        "key": "ctrl+shift+r",
         "command": "workbench.action.showAllSymbols",
         "when": "editorTextFocus"
     },
@@ -308,5 +303,64 @@
         "key": "alt+r",
         "command": "-extension.toggle",
         "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "expandLineSelection",
+        "when": "textInputFocus && editorLangId =~ /latex|rsweave/"
+    },
+    {
+        "key": "ctrl+l ctrl+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus && editorLangId =~ /latex|rsweave/"
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "-workbench.actions.view.problems"
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "extension.selectParenthesis",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k shift+9",
+        "command": "-extension.selectParenthesis",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k shift+oem_4",
+        "command": "-extension.selectCurlyBrackets",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "editor.action.smartSelect.expand"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "workbench.action.gotoSymbol"
+    },
+    {
+        "key": "ctrl+shift+o",
+        "command": "-workbench.action.gotoSymbol"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "-editor.action.refactor",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
+        "when": "inQuickOpen && inRecentFilesPicker"
+    },
+    {
+        "key": "ctrl+k ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
     },
 ]
