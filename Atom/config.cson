@@ -1,0 +1,75 @@
+"*":
+  "advanced-open-file":
+    createDirectories: true
+    createFileInstantly: true
+    fuzzyMatch: true
+  "atom-i18n":
+    customMenuI18nPath: "C:\\Users\\TraxidusWolf\\.atom\\packages\\atom-i18n\\def\\custom_menu.cson"
+    locale: "es"
+  "autocomplete-python":
+    useKite: false
+  "bracket-matcher":
+    highlightMatchingLineNumber: true
+  core:
+    disabledPackages: [
+      "autocomplete-plus"
+      "spell-check"
+    ]
+    ignoredNames: [
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+    ]
+    openEmptyEditorOnStart: false
+    projectHome: "C:\\Users\\TraxidusWolf\\Documents\\TW\\GitShit"
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "predawn-syntax"
+    ]
+  editor:
+    fontFamily: "Source Code Pro"
+    invisibles:
+      cr: " "
+      eol: " "
+    preferredLineLength: 120
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "305edb2d-2eb4-4ad4-a5df-21aae5d8f9f3"
+  "linter-flake8":
+    maxLineLength: 120
+  "linter-ui-default": {}
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      linter: true
+      linterDecorationsZIndex: 0
+    scrollAnimation: true
+    scrollAnimationDuration: 150
+  "open-terminal-here":
+    command: "start /D \"%cd%\" powershell"
+  "project-manager":
+    alwaysOpenInSameWindow: true
+    sortBy: "last modified"
+  "project-plus":
+    autoDiscover: false
+    showPath: true
+  "project-switcher2":
+    closePanes: true
+  "python-autopep8":
+    formatOnSave: true
+  script:
+    cwdBehavior: "Project directory of the script"
+  "spell-check":
+    useLocales: false
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
