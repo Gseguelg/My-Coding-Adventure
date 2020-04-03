@@ -30,10 +30,29 @@ Set-PSReadlineKeyHandler -Key Alt+Delete -Function DeleteToEnd  # Delete line af
 #
 
 # Overwriter default prompt
-function global:prompt {  # Multiple Write-Host commands with color
+function global:prompt {
+    # check if conda is visible in path
+    # to prepend current virtual environment
+    if ($env:conda_exe){
+        # normalize python executable paths to one (first)
+        $FirstPythonPath = where.exe python
+        if ($FirstPythonPath -is [array]){
+            $FirstPythonPath = $FirstPythonPath[0]
+        }
+        # get current venv
+        $CondaEnv = ( (split-path $FirstPythonPath -parent) -split "\\" )[-1]
+
+        # prepend only if parent isnt Anaconda3 folder
+        if ($CondaEnv -ne "Anaconda3") {
+            Write-Host( "(" + $CondaEnv + ") " ) -nonewline
+        }
+    }
+
+    # get cwd and disk letter
     $Splitter = $pwd -Split "\\"
     $DiskName = ($Splitter[0] -split ":")[0]
 
+    # modifies cwd string
     if ($Splitter.length -gt 4){
         $PromptPath = $DiskName + "\...\" + ($Splitter[-3..-1] -join "\")
     } else {
