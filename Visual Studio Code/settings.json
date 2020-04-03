@@ -8,7 +8,7 @@
     "editor.renderWhitespace": "boundary",
     "editor.wordWrapColumn": 120,
     "editor.minimap.showSlider": "always",
-    "workbench.startupEditor": "newUntitledFile",
+    "workbench.startupEditor": "none",
     "latex-workshop.intellisense.package.enabled": true,
     "workbench.quickOpen.closeOnFocusLost": false,
     "newFile.defaultBaseFileName": "new_file",
@@ -85,7 +85,8 @@
         "editor.defaultFormatter": "mtxr.sqltools"
     },
     "python.formatting.provider": "yapf",
-    "workbench.colorTheme": "Brackets Light Pro Bold",
+    "workbench.colorTheme": "Predawn",
     "terminal.explorerKind": "external",
-    "terminal.external.windowsExec": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    "terminal.external.windowsExec": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "extensions.ignoreRecommendations": false
 }
