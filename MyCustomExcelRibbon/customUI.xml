@@ -1,0 +1,21 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" xmlns:x="sao">
+  <ribbon>
+    <tabs>
+      <tab idQ="x:MenuMacrosPropiasTab" label="Macros Propias">
+        <group id="SeccionRangoPrecedentes" label="Rango Precedentes">
+            <button id="MostrarRangoPrecedentes" label="Ver Rango Precedentes" imageMso="TracePrecedents" onAction="MostrarRangoPrecedentes_CallBack" visible="true" size="normal"/>
+            <button id="OcultarRangoPrecedentes" label="Ocultar Rango Precedentes" imageMso="TracePrecedentsRemoveArrows" onAction="OcultarRangoPrecedentes_CallBack" visible="true" size="normal"/>
+            <button id="SeleccionarRangoPrecedentes" label="Seleccionar Rango Precedentes" imageMso="WebGoBack" onAction="SelectRangoPrecedentes_CallBack" visible="true" size="normal"/>
+        </group>
+        <group id="SeccionRangoDependientes" label="Rango Dependientes">
+            <button id="MostrarRangoDependientes" label="Ver Rango Dependientes" imageMso="TraceDependents" onAction="MostrarRangoDependientes_CallBack" visible="true" size="normal"/>
+            <button id="OcultarRangoDependientes" label="Ocultar Rango Dependientes" imageMso="TraceDependentRemoveArrows" onAction="OcultarRangoDependientes_CallBack" visible="true" size="normal"/>
+            <button id="SeleccionarRangoDependientes" label="Seleccionar Rango Dependientes" imageMso="GoTo" onAction="SelectRangoDependientes_CallBack" visible="true" size="normal"/>
+        </group>
+        <group id="SeccionRangoOtros" label="Otros">
+            <button id="OcultarFelchas" label="Ocultar Flechas" imageMso="TraceRemoveAllArrows" onAction="OcultarFlechas_CallBack" visible="true" size="normal"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
