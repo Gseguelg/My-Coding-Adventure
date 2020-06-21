@@ -72,7 +72,8 @@
         "--max-line-length=120",
         "--disable=missing-module-docstring",
         "--disable=wrong-import-order",
-        "--disable=multiple-imports"
+        "--disable=multiple-imports",
+        "--disable=redefined-outer-name"
     ],
     "python.formatting.autopep8Args": [
         "--max-line-length=120",
