@@ -197,11 +197,6 @@
         "when": "terminalFocus"
     },
     {
-        "key": "escape",
-        "command": "workbench.action.terminal.deleteToLineStart",
-        "when": "terminalFocus"
-    },
-    {
         "key": "alt+f3",
         "command": "-editor.action.dirtydiff.next",
         "when": "editorTextFocus"
@@ -265,7 +260,8 @@
     {
         "key": "ctrl+b",
         "command": "code-runner.run",
-        "when": "editorLangId == 'c' || editorLangId == 'cpp' || editorLangId == 'f'"
+        "when": "editorLangId != 'python'"
+        // "when": "editorLangId == 'c' || editorLangId == 'cpp' || editorLangId == 'f' || editorLangId == 'bat'"
     },
     {
         "key": "ctrl+alt+n",
@@ -362,5 +358,30 @@
     {
         "key": "ctrl+b",
         "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+delete",
+        "command": "deleteWordRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+delete",
+        "command": "-deleteWordRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+backspace",
+        "command": "deleteWordLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+backspace",
+        "command": "-deleteWordLeft",
+        "when": "textInputFocus && !editorReadonly"
     },
 ]
