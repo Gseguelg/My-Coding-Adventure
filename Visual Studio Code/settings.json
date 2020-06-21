@@ -4,24 +4,18 @@
     "search.showLineNumbers": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
-    "latex-workshop.view.pdf.viewer": "tab",
     "editor.renderWhitespace": "boundary",
     "editor.wordWrapColumn": 120,
     "editor.minimap.showSlider": "always",
     "workbench.startupEditor": "none",
-    "latex-workshop.intellisense.package.enabled": true,
     "workbench.quickOpen.closeOnFocusLost": false,
     "newFile.defaultBaseFileName": "new_file",
     "newFile.defaultFileExtension": "",
     "newFile.expandBraces": true,
     "newFile.relativeTo": "project",
     "newFile.showPathRelativeTo": "project",
-    "workbench.iconTheme": "ayu",
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
-    "python.pythonPath": "C:\\Users\\TraxidusWolf\\Anaconda3\\python.exe",
-    "editor.fontFamily": "Source Code Pro",
-    "debug.console.fontFamily": "Source Code Pro",
     "git.autofetch": true,
     "code-runner.clearPreviousOutput": true,
     "code-runner.saveFileBeforeRun": true,
@@ -36,28 +30,10 @@
     "editor.minimap.enabled": true,
     "workbench.statusBar.visible": true,
     "editor.formatOnSave": true,
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    },
     "vscodeWorkspaceSwitcher.paths": [
-        "C:\\Users\\TraxidusWolf\\Documents\\VSC workspaces"
+        "C:\\Users\\MY_USER_NAME\\Documents\\VSC workspaces"  // change MY_USER_NAME
     ],
     "explorer.confirmDragAndDrop": false,
-    "latex-workshop.latex.clean.subfolder.enabled": true,
-    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
-    "latex-workshop.latex.autoBuild.run": "never",
-    "latex-workshop.progress.barStyle": "Block Width",
-    "latex-workshop.view.autoFocus.enabled": true,
-    "latex-workshop.view.pdf.hand": true,
-    "latex-workshop.synctex.afterBuild.enabled": true,
-    "browser-preview.chromeExecutable": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
-    "browser-preview.startUrl": "https://google.com",
-    "C_Cpp.updateChannel": "Insiders",
-    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
-    "C_Cpp.default.cppStandard": "c++17",
-    "C_Cpp.default.cStandard": "c11",
-    "C_Cpp.default.intelliSenseMode": "gcc-x64",
-    "terminal.integrated.automationShell.windows": null,
     "debug.allowBreakpointsEverywhere": true,
     "debug.showBreakpointsInOverviewRuler": true,
     "debug.showInStatusBar": "always",
@@ -71,6 +47,10 @@
             "aceptar",
             "cancelar",
         ],
+        [
+            "verdadero",
+            "falso",
+        ],
     ],
     "newFile.rootDirectory": "~\\Desktop",
     "window.zoomLevel": 0,
@@ -78,15 +58,26 @@
         // "markdown"
     ],
     "code-runner.enableAppInsights": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "sqltools.useNodeRuntime": true,
-    "[sql]": {
-        "editor.defaultFormatter": "mtxr.sqltools"
-    },
-    "python.formatting.provider": "yapf",
+    "terminal.integrated.shell.windows": "C:\\windows\\System32\\cmd.exe",
+    "extensions.ignoreRecommendations": false,
+    "openInTerminal.app": "cmd",
+    "terminal.explorerKind": "integrated",
     "workbench.colorTheme": "Predawn",
-    "terminal.explorerKind": "external",
-    "terminal.external.windowsExec": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-    "extensions.ignoreRecommendations": false
+    // Controls the font family.
+    "editor.fontFamily": "Source Code Pro",
+    "workbench.iconTheme": "vscode-icons",
+    "python.analysis.diagnosticPublishDelay": 270,
+    "python.linting.pylintArgs": [
+        "--disable=invalid-name",
+        "--max-line-length=120",
+        "--disable=missing-module-docstring",
+        "--disable=wrong-import-order",
+        "--disable=multiple-imports"
+    ],
+    "python.formatting.autopep8Args": [
+        "--max-line-length=120",
+        "--ignore=E401"
+    ],
+    "python.linting.pylintUseMinimalCheckers": false,
+    "python.defaultInterpreterPath": "C:\\Users\\MY_USER_NAME\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe", // change MY_USER_NAME
 }
